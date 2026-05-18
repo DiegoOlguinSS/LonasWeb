@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────── */
+:root {
+  --bg-main: #111111;
+  --bg-card: #1C1C1C;
+  --neon-green: #CFFF04;
+  --neon-purple: #5D00FF;
+  --neon-cyan: #0CD4FF;
+  --neon-orange: #FF3A06;
+  --whatsapp: #25D366;
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+/* ─── Reset & Base ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #111111;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: #111111;
+  color: #d1d5db;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* ─── Utility Classes ───────────────────────────────── */
+.brutalist-border-purple {
+  border: 3px solid #5D00FF;
+  box-shadow: 6px 6px 0px 0px #5D00FF;
+}
+.brutalist-border-green {
+  border: 3px solid #CFFF04;
+  box-shadow: 6px 6px 0px 0px #CFFF04;
+}
+.brutalist-border-orange {
+  border: 3px solid #FF3A06;
+  box-shadow: 6px 6px 0px 0px #FF3A06;
+}
+.brutalist-border-cyan {
+  border: 3px solid #0CD4FF;
+  box-shadow: 6px 6px 0px 0px #0CD4FF;
+}
+.brutalist-border-whatsapp {
+  border: 3px solid #25D366;
+  box-shadow: 8px 8px 0px 0px #25D366;
+}
+
+/* ─── Animations ────────────────────────────────────── */
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+.animate-pulse-green {
+  animation: pulse-green 1.4s ease-in-out infinite;
+}
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease both;
+}
+.animate-fade-up-delay {
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+.animate-fade-up-delay2 {
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+/* ─── Gradient Text ─────────────────────────────────── */
+.gradient-green-cyan {
+  background: linear-gradient(90deg, #CFFF04 0%, #0CD4FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Map Filter ────────────────────────────────────── */
+.map-dark {
+  filter: invert(90%) hue-rotate(180deg) saturate(0.7) brightness(0.85);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-thumb { background: #5D00FF; }
+::-webkit-scrollbar-thumb:hover { background: #CFFF04; }
