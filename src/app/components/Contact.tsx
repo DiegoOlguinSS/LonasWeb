@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const WA_NUMBER = '525615282302';
 
