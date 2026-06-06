@@ -9,7 +9,7 @@ import ProductoLonasPage from './app/pages/ProductoLonasPage';
 import ProductoMallasPage from './app/pages/ProductoMallasPage';
 import ProductoCarpasPage from './app/pages/ProductoCarpasPage';
 import ProductoFundasPage from './app/pages/ProductoFundasPage';
-import TerminosPage from './app/pages/TerminosPage';
+
 import PoliticaPrivacidadPage from './app/pages/PoliticaPrivacidadPage';
 
 export default function App() {
@@ -50,7 +50,7 @@ export default function App() {
           <Route path="/producto/mallas" element={<ProductoMallasPage />} />
           <Route path="/producto/carpas" element={<ProductoCarpasPage />} />
           <Route path="/producto/fundas" element={<ProductoFundasPage />} />
-          <Route path="/legal/terminos" element={<TerminosPage />} />
+
           <Route path="/legal/privacidad" element={<PoliticaPrivacidadPage />} />
         </Routes>
 

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 const WA_NUMBER = '525615282302';
 
@@ -18,6 +18,13 @@ const contactCards = [
     lines: ['+52 56 1528 2302'],
     color: '#CFFF04',
     href: 'tel:+525615282302',
+  },
+  {
+    icon: Mail,
+    title: 'CORREO ELECTRÓNICO',
+    lines: ['lonaslastrojes@gmail.com'],
+    color: '#FF5A1F',
+    href: 'mailto:lonaslastrojes@gmail.com',
   },
   {
     icon: Clock,

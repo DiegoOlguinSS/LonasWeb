@@ -44,7 +44,7 @@ export default function PoliticaPrivacidad() {
             Realizar estudios internos sobre hábitos de consumo, navegación y fines estadísticos.
           </p>
           <p className="text-sm font-normal text-gray-700 leading-relaxed">
-            En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, puede comunicarlo desde este momento enviando un mensaje al correo electrónico "EMAIL_ADDRESS".
+            En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, puede comunicarlo desde este momento enviando un mensaje al correo electrónico "lonaslastrojes@gmail.com".
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function PoliticaPrivacidad() {
             Usted tiene derecho de acceder a sus datos personales que poseemos y a los detalles del tratamiento de los mismos, así como a rectificarlos en caso de ser inexactos o incompletos; cancelarlos cuando considere que no se requieren para alguna de las finalidades señaladas en el presente aviso, o bien, oponerse al tratamiento de los mismos para fines específicos.
           </p>
           <p className="text-sm font-normal text-gray-700 leading-relaxed">
-            Para el ejercicio de dichos derechos, deberá presentar una solicitud por escrito enviada a nuestro correo electrónico "EMAIL_ADDRESS"   . Su solicitud deberá contener su nombre, domicilio, documentos que acrediten su identidad y la descripción clara de los datos. Se le comunicará la respuesta a su solicitud en un plazo máximo de 20 días hábiles.
+            Para el ejercicio de dichos derechos, deberá presentar una solicitud por escrito enviada a nuestro correo electrónico "lonaslastrojes@gmail.com"   . Su solicitud deberá contener su nombre, domicilio, documentos que acrediten su identidad y la descripción clara de los datos. Se le comunicará la respuesta a su solicitud en un plazo máximo de 20 días hábiles.
           </p>
         </div>
 

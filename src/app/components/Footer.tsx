@@ -22,20 +22,21 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Disclaimer legal */}
+        <p className="text-xs text-gray-500 text-left mt-2">
+          *Precios y cotizaciones sujetos a cambios sin previo aviso.
+        </p>
+
         {/* Barra inferior estilo fine print */}
-        <div className="mt-10 pt-4 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div className="mt-4 pt-4 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-2">
 
           {/* Izquierda: copyright */}
           <p className="text-[10px] text-gray-500">
             © {currentYear} Lonas Las Trojes. Todos los derechos reservados.
           </p>
 
-          {/* Derecha: enlaces legales */}
+          {/* Derecha: enlace legal */}
           <div className="flex items-center gap-2 text-[10px] text-gray-500">
-            <Link to="/legal/terminos" className="hover:text-gray-300 transition-colors">
-              Términos y condiciones
-            </Link>
-            <span className="opacity-40">|</span>
             <Link to="/legal/privacidad" className="hover:text-gray-300 transition-colors">
               Política de privacidad
             </Link>
