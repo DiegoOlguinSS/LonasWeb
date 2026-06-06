@@ -22,7 +22,7 @@ const features: Feature[] = [
     titleColor: 'INSPIRAN',
     accent: '#CFFF04',
     accentColor: '#CFFF04',
-    image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&q=80',
+    image: '/images/carpa-roja-eventos.webp',
     imageBlend: 'rgba(93,0,255,0.55)',
     items: [
       'Armado y desarmado rápido para cualquier evento',
@@ -40,7 +40,7 @@ const features: Feature[] = [
     titleColor: 'DESDE EL PRIMER DÍA',
     accent: '#0CD4FF',
     accentColor: '#0CD4FF',
-    image: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900&q=80',
+    image: '/images/malla-sombra-patio-residencial.webp',
     imageBlend: 'rgba(12,212,255,0.35)',
     items: [
       'Bloquea hasta el 95% de los rayos del sol',
@@ -58,7 +58,7 @@ const features: Feature[] = [
     titleColor: 'PARA CADA NECESIDAD',
     accent: '#5D00FF',
     accentColor: '#5D00FF',
-    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=80',
+    image: '/images/lona-negra-terraza.webp',
     imageBlend: 'rgba(93,0,255,0.45)',
     items: [
       'Rafia económica para el hogar y el rancho',
@@ -76,7 +76,7 @@ const features: Feature[] = [
     titleColor: 'PARA TU VEHÍCULO',
     accent: '#FF3A06',
     accentColor: '#FF3A06',
-    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=80',
+    image: '/images/funda-auto-moto.webp',
     imageBlend: 'rgba(255,58,6,0.35)',
     items: [
       'Confección exclusiva a la medida de tu modelo',
@@ -91,8 +91,8 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <section id="nosotros" className="overflow-hidden" style={{ backgroundColor: '#111111' }}>
-      {features.map((f, i) => (
+    <section id="productos-detalle" className="overflow-hidden bg-gray-50 dark:bg-[#111111]">
+      {features.map((f) => (
         <div
           key={f.label}
           className={`flex flex-col ${f.reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}
@@ -105,6 +105,10 @@ export default function Features() {
               alt={f.label}
               className="w-full h-full object-cover mix-blend-luminosity"
               style={{ filter: 'grayscale(20%)' }}
+              loading="lazy"
+              decoding="async"
+              width={900}
+              height={480}
             />
             {/* Color tint */}
             <div
@@ -115,11 +119,16 @@ export default function Features() {
 
           {/* Text panel */}
           <div
-            className="w-full md:w-1/2 flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14"
-            style={{ backgroundColor: '#111111' }}
+            className="relative w-full md:w-1/2 flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14 overflow-hidden bg-[#1C1C1C]"
           >
+            {/* Ambient glow blob */}
+            <div
+              className="pointer-events-none absolute -top-16 -left-16 w-80 h-80 rounded-full blur-[120px] opacity-25"
+              style={{ backgroundColor: f.accentColor }}
+            />
+
             {/* Sublabel */}
-            <div className="flex items-center gap-2 mb-4">
+            <div className="relative flex items-center gap-2 mb-4">
               <div className="w-5 h-0.5" style={{ backgroundColor: f.accentColor }} />
               <span
                 className="text-xs font-bold tracking-[0.2em] uppercase"

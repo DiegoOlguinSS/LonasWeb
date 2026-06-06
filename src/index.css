@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 /* ─── Design Tokens ─────────────────────────────────── */
 :root {
@@ -19,6 +20,9 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #f9fafb;
+}
+html.dark {
   background-color: #111111;
 }
 
@@ -26,11 +30,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
-  background-color: #111111;
-  color: #d1d5db;
+  background-color: #f9fafb;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+html.dark body {
+  background-color: #111111;
+  color: #d1d5db;
 }
 
 #root {
@@ -100,8 +108,44 @@ body {
   filter: invert(90%) hue-rotate(180deg) saturate(0.7) brightness(0.85);
 }
 
-/* ─── Scrollbar ─────────────────────────────────────── */
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-track { background: #e5e7eb; }
 ::-webkit-scrollbar-thumb { background: #5D00FF; }
 ::-webkit-scrollbar-thumb:hover { background: #CFFF04; }
+html.dark ::-webkit-scrollbar-track { background: #111111; }
+
+/* ─── About: Differentiator Card Hover Glows ────────────────────────────── */
+/* Purple card */
+.brutalist-border-purple {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.brutalist-border-purple:hover {
+  transform: translateY(-8px);
+  box-shadow: 6px 6px 0px 0px #5D00FF, 0 20px 60px rgba(93,0,255,0.45);
+}
+/* Orange card */
+.brutalist-border-orange {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.brutalist-border-orange:hover {
+  transform: translateY(-8px);
+  box-shadow: 6px 6px 0px 0px #FF3A06, 0 20px 60px rgba(255,58,6,0.45);
+}
+/* Green card */
+.brutalist-border-green {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.brutalist-border-green:hover {
+  transform: translateY(-8px);
+  box-shadow: 6px 6px 0px 0px #CFFF04, 0 20px 60px rgba(207,255,4,0.35);
+}
+
+/* ─── About: Hero Image frame pulse ────────────────────────────────────── */
+@keyframes neon-frame-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(93,0,255,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(93,0,255,0.6), 0 0 80px rgba(207,255,4,0.15); }
+}
+.neon-frame-pulse {
+  animation: neon-frame-pulse 3s ease-in-out infinite;
+}
